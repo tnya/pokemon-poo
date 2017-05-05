@@ -1,3 +1,6 @@
+/*
+CREO CONSTRUCTOR DE POKEMON
+*/
 function Pokemon(nombre,color,poderDeAtaque,nivelDeAmistad,vida){
 	this.nombre = nombre;
 	this.color = color;
@@ -24,7 +27,9 @@ function Pokemon(nombre,color,poderDeAtaque,nivelDeAmistad,vida){
 		return resultado;
 	}
 }
-
+/*
+MAS INSTANCIAS DE POKEMON
+*/
 const Pikachu = new Pokemon("Pikachu", "amarillo", 100)
 const Charmander = new Pokemon("Charmander", "rojo", 20)
 
@@ -47,10 +52,10 @@ function botonPelear(){
     var pokemon2 = new Pokemon(option2,"rojo",ataqueDos);
 
     var attack = pokemon1.atacar(option2);
-    var tagResultado = document.getElementById("resultado");
-    var textoResultado = option1 + " ataco a " + option2 + " y " +  option2 + " tiene una vida de : " + (pokemon2.vida - attack1);    
+    var result = document.getElementById("resultado");
+    var printResult = option1 + " ataco a " + option2 + " y " +  option2 + " tiene una vida de : " + (pokemon2.vida - attack1);    
 
-    tagResultado.innerHTML = textoResultado;
+    result.innerHTML = printResult;
 
 }
 
